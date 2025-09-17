@@ -18,6 +18,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Disable right-click on images
+    document.addEventListener('contextmenu', (e) => {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
+    });
+
+    // Disable dragstart on images
+    document.addEventListener('dragstart', (e) => {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
+    });
+
     // Navbar scroll behavior
     const header = document.querySelector('header');
     let scrollTimeout;
