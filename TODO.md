@@ -1,3 +1,4 @@
-- [x] Update index.html: Modify the navbar to turn "Contact" into a dropdown menu with LinkedIn, Instagram, and YouTube links, each with icons using bre-icon.
-- [x] Update styles.css: Add CSS styles for the dropdown menu, including hover effects, positioning, and icon sizing.
-- [x] Test the dropdown functionality and icon loading.
+- [x] Add fadeIn and fadeOut keyframes to styles.css
+- [x] Add animation class for h1 in styles.css
+- [x] Add JavaScript logic to script.js for toggling text every 10 seconds with fade
+- [ ] Test the animation

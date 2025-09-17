@@ -43,6 +43,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Navbar title animation
+document.addEventListener('DOMContentLoaded', () => {
+    const title = document.querySelector('nav h1');
+    if (title) {
+        let isJapanese = true;
+        setInterval(() => {
+            // Fade out
+            title.classList.add('fade-out');
+            title.classList.remove('fade-in');
+            setTimeout(() => {
+                // Change text
+                title.textContent = isJapanese ? 'Personal-Web' : 'パーソナルウェブ';
+                isJapanese = !isJapanese;
+                // Fade in
+                title.classList.remove('fade-out');
+                title.classList.add('fade-in');
+            }, 1000); // After fade out duration
+        }, 10000); // Every 10 seconds
+    }
+});
+
 // Preloader script (Ini harus di luar DOMContentLoaded karena menunggu 'load' event)
 window.addEventListener('load', () => {
     setTimeout(() => {

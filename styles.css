@@ -8,7 +8,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #303030;
     background-color: #f4f4f4;
 }
 
@@ -21,7 +21,7 @@ body {
 /* Header and Navigation */
 /* Header and Navigation */
 header {
-    background-color: #333;
+    background-color: #3c3c3c;
     color: #fff;
     padding: 1rem 0; /* Padding awal */
     position: fixed;
@@ -40,10 +40,10 @@ header {
     margin: 10px 20px; /* Jarak dari atas (10px) dan dari samping (20px) */
     width: calc(100% - 40px); /* Mengurangi lebar sesuai margin kiri dan kanan */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    background-color: #333;
+    background-color: #3333336d;
+    backdrop-filter: blur(10px);
     padding: 0.7rem 0; /* Mengurangi padding agar terlihat mengecil */
     transform: scale(0.98); /* Sedikit mengecil */
-    left: 20px; /* Geser ke kanan sesuai margin kiri */
     /* top: 10px; */ /* Tidak perlu top di sini karena sudah ada margin-top */
 }
 
@@ -117,16 +117,10 @@ nav ul li ul.dropdown-menu li a {
 }
 
 nav ul li ul.dropdown-menu li a:hover {
-    background-color: #f39c12;
-    color: #fff;
+    color: #f39c12;
+    border-radius: 10px;
 }
 
-.social-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    fill: #f39c12;
-}
 
 /* Sections */
 .section {
@@ -147,29 +141,51 @@ nav ul li ul.dropdown-menu li a:hover {
 }
 
 /* About section */
-.about-flex {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+.section#about {
+    padding: 90px 0 60px 0;
 }
 
-.profile-img {
-    width: 150px;
-    height: 150px;
+.about-wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.banner {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images-Photoroom\ \(1\).png);
+    height: 400px;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.banner .profile-img {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-.about-left {
+
+.about-card {
     text-align: left;
 }
 
-.about-right {
-    text-align: right;
+.about-card h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
 }
 
-.about-text {
-    text-align: right;
+.about-card p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #555;
 }
 
 /* Skills carousel */
@@ -414,12 +430,51 @@ footer {
         padding: 40px 0;
     }
 
+    .section#about {
+        padding: 90px 0 40px 0;
+    }
+
+    .about-wrapper {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .banner {
+        width: 100%;
+        height: 250px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .banner .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-container {
+        width: 100%;
+        border-radius: 0 0 15px 15px;
+    }
+
     .skills-grid, .certificates-grid, .projects-grid {
         grid-template-columns: 1fr;
     }
+}
 
-    .profile-img {
-        width: 120px;
-        height: 120px;
-    }
+/* Fade in and fade out animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
 }
