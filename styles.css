@@ -21,13 +21,14 @@ body {
 /* Header and Navigation */
 /* Header and Navigation */
 header {
-    background-color: #3c3c3c;
+    background-color: #545454;
     color: #fff;
     padding: 1rem 0; /* Padding awal */
     position: fixed;
     width: 100%; /* Lebar penuh awal */
     top: 0;
     left: 0;
+    backdrop-filter: blur(10px);
     transition: all 0.3s ease; /* Transisi untuk semua properti */
     z-index: 1000;
     border-radius: 0; /* Pastikan radius awal 0 */
@@ -226,7 +227,7 @@ nav ul li ul.dropdown-menu li a:hover {
 .certificate {
     background-color: #f9f9f9;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -260,7 +261,7 @@ nav ul li ul.dropdown-menu li a:hover {
 .certificate {
     background-color: #f9f9f9;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
