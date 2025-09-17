@@ -19,10 +19,32 @@ body {
 }
 
 /* Header and Navigation */
+/* Header and Navigation */
 header {
     background-color: #333;
     color: #fff;
-    padding: 1rem 0;
+    padding: 1rem 0; /* Padding awal */
+    position: fixed;
+    width: 100%; /* Lebar penuh awal */
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease; /* Transisi untuk semua properti */
+    z-index: 1000;
+    border-radius: 0; /* Pastikan radius awal 0 */
+    box-shadow: none; /* Pastikan shadow awal tidak ada */
+    margin: 0; /* Pastikan margin awal 0 */
+}
+
+.header-scrolled {
+    border-radius: 15px; /* Membulat di semua sisi (atas dan bawah) */
+    margin: 10px 20px; /* Jarak dari atas (10px) dan dari samping (20px) */
+    width: calc(100% - 40px); /* Mengurangi lebar sesuai margin kiri dan kanan */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: #333;
+    padding: 0.7rem 0; /* Mengurangi padding agar terlihat mengecil */
+    transform: scale(0.98); /* Sedikit mengecil */
+    left: 20px; /* Geser ke kanan sesuai margin kiri */
+    /* top: 10px; */ /* Tidak perlu top di sini karena sudah ada margin-top */
 }
 
 nav .container {
@@ -52,6 +74,58 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #f39c12;
+}
+
+/* Dropdown menu styles */
+nav ul li.dropdown {
+    position: relative;
+}
+
+nav ul li.dropdown > a::after {
+    content: " ▼";
+    font-size: 0.6rem;
+    margin-left: 4px;
+}
+
+nav ul li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+}
+
+nav ul li ul.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    border-radius: 0 0 5px 5px;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+nav ul li ul.dropdown-menu li {
+    width: 100%;
+}
+
+nav ul li ul.dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+nav ul li ul.dropdown-menu li a:hover {
+    background-color: #f39c12;
+    color: #fff;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    fill: #f39c12;
 }
 
 /* Sections */
