@@ -55,6 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTimeout = null; // Reset timeout
         }, 10); // Throttle ke 10ms (bisa disesuaikan)
     });
+
+    // Card rotation
+    const aboutCard = document.getElementById('about-card');
+    if (aboutCard) {
+        aboutCard.addEventListener('click', function() {
+            this.classList.toggle('rotated');
+        });
+    }
 });
 
 // Navbar title animation
