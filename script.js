@@ -63,6 +63,65 @@ document.addEventListener('DOMContentLoaded', () => {
             this.classList.toggle('rotated');
         });
     }
+
+    // Skill card click effect
+    const skills = document.querySelectorAll('.skill');
+    let expandedSkill = null;
+
+    skills.forEach(skill => {
+        // Add close button to each skill card
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'close-btn';
+        closeBtn.innerHTML = '×';
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeExpandedSkill();
+        });
+        skill.appendChild(closeBtn);
+
+        skill.addEventListener('click', () => {
+            if (expandedSkill) {
+                closeExpandedSkill();
+            }
+            if (expandedSkill !== skill) {
+                expandSkill(skill);
+            }
+        });
+    });
+
+    function expandSkill(skill) {
+        skill.classList.add('expanded');
+        expandedSkill = skill;
+        const overlay = document.querySelector('.skill-overlay');
+        if (overlay) {
+            overlay.classList.add('active');
+        }
+    }
+
+    function closeExpandedSkill() {
+        if (expandedSkill) {
+            expandedSkill.classList.remove('expanded');
+            expandedSkill = null;
+            const overlay = document.querySelector('.skill-overlay');
+            if (overlay) {
+                overlay.classList.remove('active');
+            }
+        }
+    }
+
+    // Close expanded skill when clicking outside or pressing Escape
+    document.addEventListener('click', (e) => {
+        if (expandedSkill && !expandedSkill.contains(e.target)) {
+            closeExpandedSkill();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && expandedSkill) {
+            closeExpandedSkill();
+        }
+    });
+
 });
 
 // Navbar title animation
@@ -76,12 +135,12 @@ document.addEventListener('DOMContentLoaded', () => {
             title.classList.remove('fade-in');
             setTimeout(() => {
                 // Change text
-                title.textContent = isJapanese ? 'Personal-Web' : 'パーソナルウェブ';
+                title.textContent = isJapanese ? 'Personal-Web' : 'パーソナルウェブ' ;
                 isJapanese = !isJapanese;
                 // Fade in
                 title.classList.remove('fade-out');
                 title.classList.add('fade-in');
-            }, 1000); // After fade out duration
+            }, 910); // After fade out duration
         }, 10000); // Every 10 seconds
     }
 });
