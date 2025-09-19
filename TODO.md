@@ -1,0 +1,6 @@
+- [x] Tambahkan menu hamburger ke navigasi di index.html
+- [x] Tambahkan CSS untuk menu hamburger dan navigasi mobile di styles.css
+- [x] Tambahkan media queries untuk layar kecil (480px) untuk menyesuaikan ukuran font, gambar, dan padding
+- [x] Pastikan grid responsif untuk semua section
+- [x] Tambahkan JavaScript untuk toggle menu hamburger di script.js
+- [ ] Verifikasi responsivitas dengan browser_action

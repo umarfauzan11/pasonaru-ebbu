@@ -125,6 +125,13 @@ nav ul li ul.dropdown-menu li a:hover {
     border-radius: 10px;
 }
 
+/* Nav links for mobile */
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+
 
 /* Sections */
 .section {
@@ -728,6 +735,91 @@ footer {
 
     .skills-grid, .certificates-grid, .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .section#skills h2 {
+        font-size: 60px;
+    }
+
+    .section#certificates h2 {
+        font-size: 50px;
+    }
+
+    .section#projects h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 30px 0;
+        margin: 5px 10px 10px 10px;
+        width: calc(100% - 20px);
+    }
+
+    .section#about {
+        padding: 70px 0 30px 0;
+    }
+
+    .banner {
+        height: 200px;
+    }
+
+    .banner .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .about-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-card-back {
+        font-size: 2rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .section#skills h2 {
+        font-size: 40px;
+    }
+
+    .section#certificates h2 {
+        font-size: 35px;
+    }
+
+    .section#projects h2 {
+        font-size: 25px;
+    }
+
+    .certificate embed, .certificate img {
+        width: 200px;
+    }
+
+    .project img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        border-radius: 10px;
+    }
+
+    .footer-logo {
+        width: 150px;
+        height: 84px;
+    }
+
+    .contact-icons a {
+        font-size: 1.5rem;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
