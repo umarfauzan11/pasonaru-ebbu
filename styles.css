@@ -34,6 +34,8 @@ header {
     border-radius: 0; /* Pastikan radius awal 0 */
     box-shadow: none; /* Pastikan shadow awal tidak ada */
     margin: 0; /* Pastikan margin awal 0 */
+    border-radius: 25px;
+    transform: scale(0.9);
 }
 
 .header-scrolled {
@@ -189,6 +191,7 @@ background: radial-gradient(circle, rgba(238, 206, 174, 1) 0%, rgba(148, 187, 23
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     min-height: 400px;
+    padding-bottom: 20px;
 }
 
 .card-inner {
@@ -201,7 +204,7 @@ background: radial-gradient(circle, rgba(238, 206, 174, 1) 0%, rgba(148, 187, 23
 }
 
 .rotated .card-inner {
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
 }
 
 .card-front, .card-back {
@@ -210,9 +213,11 @@ background: radial-gradient(circle, rgba(238, 206, 174, 1) 0%, rgba(148, 187, 23
     height: 400px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding-bottom: 70px;
+    padding-top: 50px;
 }
 
 .card-front {
@@ -238,7 +243,13 @@ background: radial-gradient(circle, rgba(238, 206, 174, 1) 0%, rgba(148, 187, 23
 
 .about-card h2 {
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: 7rem;
+    color: #333;
+}
+
+.about-card-back{
+    margin-bottom: 20px;
+    font-size: 3rem !important;
     color: #333;
 }
 
@@ -251,10 +262,12 @@ background: radial-gradient(circle, rgba(238, 206, 174, 1) 0%, rgba(148, 187, 23
 .about-text {
     text-align: center;
     font-weight: 500;
-    line-height: 1.8;
+    line-height: 1.8rem;
     font-size: 1.3rem;
-    padding-left: 122px;
+    padding-left: 34px;
+    padding-right: 34px;
 }
+
 
 /* Skills carousel */
 .skills-carousel {
@@ -315,7 +328,7 @@ background: radial-gradient(circle, rgba(238, 206, 174, 1) 0%, rgba(148, 187, 23
 }
 
 .skill {
-    background-color: rgba(249, 249, 249, 0.8);
+    background-color: rgba(59, 59, 59, 0.8);
     padding: 20px;
     border-radius: 15px;
     text-align: center;
@@ -368,7 +381,7 @@ background: radial-gradient(circle, rgba(238, 206, 174, 1) 0%, rgba(148, 187, 23
     position: absolute;
     top: 20px;
     right: 20px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(237, 97, 97, 0.8);
     border: none;
     border-radius: 50%;
     width: 40px;
@@ -446,7 +459,7 @@ background: radial-gradient(circle, rgba(238, 206, 174, 1) 0%, rgba(148, 187, 23
 
 .skill p {
     font-size: 0.9rem;
-    color: #555;
+    color: #ffffff;
     line-height: 1.4;
 }
 
@@ -509,12 +522,30 @@ input, textarea {
     border-radius: 5px;
 }
 
-.contact-info {
-    text-align: center;
+.contact-card {
+    background-color: rgba(200, 199, 199, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 35px;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    outline: 2px solid rgba(228, 228, 228, 0.427);
+    max-width: 300px;
+    margin: 0 auto;
 }
 
-.contact-info p {
-    margin-bottom: 10px;
+.contact-icons a {
+    color: #303030;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contact-icons a:hover {
+    color: #f39c12;
+    transform: scale(0.9);
 }
 
 /* Footer */
