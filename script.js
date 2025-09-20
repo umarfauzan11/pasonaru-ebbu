@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile menu toggle
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
 
     if (mobileMenuToggle && mobileMenu) {
         mobileMenuToggle.addEventListener('click', () => {
@@ -132,6 +133,15 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenuToggle.setAttribute('aria-expanded', !expanded);
             mobileMenuToggle.classList.toggle('active');
             mobileMenu.classList.toggle('active');
+        });
+    }
+
+    // Mobile menu close button
+    if (mobileMenuClose && mobileMenu) {
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            mobileMenuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
         });
     }
 });
