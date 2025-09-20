@@ -169,8 +169,6 @@ nav ul li ul.dropdown-menu li a:hover {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 180px;
-        height: 100vh;
         background-color: rgba(48, 48, 48, 0.534);
         backdrop-filter: blur(10px);
         flex-direction: column;
