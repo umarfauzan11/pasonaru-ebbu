@@ -313,7 +313,30 @@ background: radial-gradient(circle, rgba(238, 206, 174, 1) 0%, rgba(148, 187, 23
     margin-bottom: 90px;
 }
 
+.bannerjp {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(pixel-7089895_1280.png); */
+    background: #eeceae;
+    background: radial-gradient(circle, rgb(255, 84, 84) 0%, rgba(148, 187, 233, 1) 100%);
+    height: 400px;
+    overflow: hidden;
+    border-radius: 30px;
+    margin-bottom: 90px;
+}
+
 .banner .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.bannerjp .profile-img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
