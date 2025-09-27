@@ -27,100 +27,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <style>
-        .language-switch {
-            position: relative;
-            width: 90px;
-            height: 35px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 8px;
-            box-shadow:
-                0 8px 32px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow: hidden;
-        }
 
-        .language-switch::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.4),
-                transparent
-            );
-            transition: left 0.6s ease;
-        }
-
-        .language-switch:hover::before {
-            left: 100%;
-        }
-
-        .language-switch:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
-            box-shadow:
-                0 12px 40px rgba(0, 0, 0, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.3);
-        }
-
-        .switch-left, .switch-right {
-            font-size: 16px;
-            z-index: 2;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 600;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        }
-
-        .switch-circle {
-            position: absolute;
-            width: 28px;
-            height: 28px;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            top: 2.5px;
-            left: 3px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow:
-                0 4px 12px rgba(0, 0, 0, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.5);
-            z-index: 1;
-        }
-
-        .switch-circle::before {
-            content: '';
-            position: absolute;
-            top: 30%;
-            left: 30%;
-            width: 40%;
-            height: 40%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.8), transparent);
-            border-radius: 50%;
-        }
-
-        .switch-circle.active {
-            left: 59px;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8));
-        }
-
-        .switch-circle.active::before {
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.9), transparent);
-        }
-    </style>
 </head>
 <body>
     <div id="preloader">
@@ -157,12 +64,14 @@
                             <li><a href="https://youtube.com/@UFauzan" target="_blank">YouTube</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <div class="language-switch" onclick="toggleLanguage()">
-                            <div class="switch-left">🇮🇩</div>
-                            <div class="switch-right">🇯🇵</div>
-                            <div class="switch-circle"></div>
-                        </div>
+                    <li class="dropdown">
+                        <button class="language-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         <span class="nav-text">🇮🇩 Bahasa</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="jp.html">🇯🇵</a></li>
+                            <li><a class="dropdown-item" href="ar.html">🇸🇦</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -393,17 +302,5 @@
     ></script>
     <script src="bre-icons.js"></script>
     <script src="script.js"></script>
-    <script>
-        function toggleLanguage() {
-            const circle = document.querySelector('.switch-circle');
-            if (circle.classList.contains('active')) {
-                circle.classList.remove('active');
-                window.location.href = 'index.html';
-            } else {
-                circle.classList.add('active');
-                window.location.href = 'jp.html';
-            }
-        }
-    </script>
 </body>
 </html>

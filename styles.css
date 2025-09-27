@@ -306,7 +306,7 @@ nav ul li ul.dropdown-menu li a:hover {
     align-items: center;
     /* background-image: url(pixel-7089895_1280.png); */
     background: #eeceae;
-background: radial-gradient(circle, rgba(238, 206, 174, 1) 0%, rgba(148, 187, 233, 1) 100%);
+background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(162, 233, 148) 100%);
     height: 400px;
     overflow: hidden;
     border-radius: 30px;
@@ -996,6 +996,32 @@ footer {
 
 .fade-out {
     animation: fadeOut 1s forwards;
+}
+
+/* Language dropdown styles */
+.language-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: inherit;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.language-btn:hover {
+    color: #f39c12;
+}
+
+.language-btn:focus {
+    outline: none;
+}
+
+.dropdown-menu-dark .dropdown-item.active {
+    background-color: #f39c12;
 }
 
 /* Disable image dragging and selection */

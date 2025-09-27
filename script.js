@@ -167,6 +167,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Language select handler
+document.addEventListener('DOMContentLoaded', () => {
+    const languageSelect = document.getElementById('language-select');
+    if (languageSelect) {
+        languageSelect.addEventListener('change', () => {
+            window.location.href = languageSelect.value;
+        });
+    }
+});
+
 // Preloader script (Ini harus di luar DOMContentLoaded karena menunggu 'load' event)
 window.addEventListener('load', () => {
     setTimeout(() => {
