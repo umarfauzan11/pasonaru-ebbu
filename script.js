@@ -189,3 +189,24 @@ window.addEventListener('load', () => {
         }
     }, 1000); // 1 second delay after load
 });
+
+// Animate percentage count from 0 to target number
+document.addEventListener('DOMContentLoaded', () => {
+    const percentageElement = document.querySelector('.percentage');
+    if (!percentageElement) return;
+
+    const target = parseInt(percentageElement.textContent, 10);
+    percentageElement.textContent = '0%';
+
+    let current = 0;
+    const duration = 2700; // animation duration in ms
+    const stepTime = Math.abs(Math.floor(duration / target));
+
+    const timer = setInterval(() => {
+        current += 1;
+        percentageElement.textContent = current + '%';
+        if (current >= target) {
+            clearInterval(timer);
+        }
+    }, stepTime);
+});
