@@ -259,6 +259,33 @@ nav ul li ul.dropdown-menu li a:hover {
         text-align: center;
     }
 
+    /* Show text for language button in mobile */
+    .language-btn .nav-text {
+        display: inline;
+    }
+
+    /* Style button in mobile nav */
+    .nav-links li button {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        font-size: 1.1rem;
+        background: none;
+        border: none;
+        width: 100%;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .nav-links li button:hover {
+        background-color: rgba(243, 156, 18, 0.2);
+        color: #f39c12;
+    }
+
     /* Dropdown menu for mobile */
     .dropdown-menu {
         position: static !important;
