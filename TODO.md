@@ -1,15 +1,24 @@
-# Mobile Navbar Icons Implementation
+# TODO: Add Skill Levels/Progress Bars to Skills Section
 
-## Current Status: In Progress
+## Tasks
+- [ ] Update styles.css to add CSS for progress bars (.skill-progress and .progress-bar)
+- [ ] Edit index.html: Add progress bars to each skill in the skills-grid
+- [ ] Edit jp.html: Add progress bars to each skill in the skills-grid
+- [ ] Edit ar.html: Add progress bars to each skill in the skills-grid
+- [ ] Test progress bars on different screen sizes
+- [ ] Ensure accessibility and contrast for progress bars
 
-### Completed Tasks:
-- [ ] Add hamburger menu button to HTML
-- [ ] Add Font Awesome icons to navigation items
-- [ ] Update CSS for mobile icon display
-- [ ] Test mobile menu functionality
-
-### Next Steps:
-1. Add hamburger menu button to index.html
-2. Add icons to each navigation item
-3. Update styles.css for mobile responsiveness
-4. Test the implementation
+## Skill Levels Assigned
+- HTML: 95%
+- CSS: 90%
+- JavaScript: 85%
+- Bootstrap: 80%
+- PHP: 75%
+- Laravel: 70%
+- Figma: 85%
+- Canva: 90%
+- Adobe Premiere: 80%
+- Capcut: 85%
+- Filmora: 75%
+- Blender: 65%
+- Godot: 60%

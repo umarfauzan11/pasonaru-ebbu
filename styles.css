@@ -306,6 +306,21 @@ nav ul li ul.dropdown-menu li a:hover {
         padding: 10px 20px;
         font-size: 1rem;
     }
+
+    /* Skills section mobile adjustments */
+    .skills-subgrid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-title {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .section#skills h2 {
+        font-size: 40px;
+        text-align: center;
+    }
 }
 
 
@@ -555,6 +570,24 @@ nav ul li ul.dropdown-menu li a:hover {
 
 /* Skills section */
 .skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.skill-category {
+    /* Container for each category */
+}
+
+.category-title {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.skills-subgrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -696,6 +729,29 @@ nav ul li ul.dropdown-menu li a:hover {
     line-height: 1.4;
 }
 
+/* Skill Progress Bar */
+.skill-progress {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #f39c12, #e67e22);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
 /* Certificates section */
 .certificates-grid {
     display: grid;
@@ -766,16 +822,22 @@ input, textarea {
     display: flex;
     justify-content: center;
     outline: 2px solid rgba(228, 228, 228, 0.427);
-    max-width: 300px;
+    max-width: 500px;
     margin: 0 auto;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .contact-icons a {
     color: #303030;
     font-size: 1.8rem;
     transition: color 0.3s ease;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .contact-icons a:hover {
@@ -1005,11 +1067,11 @@ footer {
         padding: 70px 0 30px 0;
     }
 
-    .banner {
+    .banner, .bannerjp, .bannerar {
         height: 200px;
     }
 
-    .banner .profile-img {
+    .banner .profile-img, .bannerjp .profile-img, .bannerar .profile-img {
         width: 120px;
         height: 120px;
     }
@@ -1060,6 +1122,15 @@ footer {
         font-size: 1.5rem;
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    .proficiency-logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .percentage {
+        font-size: 3rem;
     }
 }
 
